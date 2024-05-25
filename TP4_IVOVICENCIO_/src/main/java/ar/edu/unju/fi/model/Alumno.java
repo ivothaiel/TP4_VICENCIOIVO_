@@ -20,7 +20,7 @@ public class Alumno {
     private String LU;
 	public Alumno() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	public Alumno(String dni, String nombre, String apellido, String email, String telefono, Date fechaNacimiento,
 			String domicilio, String lU) {

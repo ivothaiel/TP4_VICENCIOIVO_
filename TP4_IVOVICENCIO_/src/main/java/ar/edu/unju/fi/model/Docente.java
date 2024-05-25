@@ -13,7 +13,7 @@ public class Docente {
     private String telefono;
 	public Docente() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 	}
 	public Docente(String legajo, String nombre, String apellido, String email, String telefono) {
 		super();

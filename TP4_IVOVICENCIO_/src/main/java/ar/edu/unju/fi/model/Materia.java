@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 	public class Materia {
 		  private String codigo;
 		    private String nombre;
-		    @Autowired
+		  @Autowired
 		    private int curso;
 		    private int cantidadDeHoras;
 		    private String modalidad; // Virtual o Presencial

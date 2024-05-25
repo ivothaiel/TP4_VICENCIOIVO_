@@ -8,7 +8,7 @@ private int id;
 private String nombre;
 public Carrera() {
 	super();
-	// TODO Auto-generated constructor stub
+	
 }
 public Carrera(int id, String nombre) {
 	super();
