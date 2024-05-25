@@ -1,8 +1,6 @@
 package ar.edu.unju.fi.model;
 
 import java.sql.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
@@ -11,7 +9,6 @@ public class Alumno {
 	
 	private String dni;
     private String nombre;
-    @Autowired
     private String apellido;
     private String email;
     private String telefono;
