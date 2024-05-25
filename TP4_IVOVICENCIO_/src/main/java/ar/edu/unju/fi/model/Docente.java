@@ -1,13 +1,12 @@
 package ar.edu.unju.fi.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class Docente {
 	private String legajo;
     private String nombre;
-    @Autowired
     private String apellido;
     private String email;
     private String telefono;
