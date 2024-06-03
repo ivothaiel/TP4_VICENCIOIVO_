@@ -7,181 +7,126 @@
     <!-- Bootstrap CSS -->
     <link th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}" rel="stylesheet">
     <style>
-    /* Estilos CSS */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: black;
-            color: white;
-            padding: 20px;
-            min-height: 100vh;
-            margin: 0;
-        }
+     /* Estilos Generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2c3e50; /* Gris oscuro */
+    color: #ecf0f1; /* Blanco */
+    padding: 20px;
+    min-height: 100vh;
+    margin: 0;
+}
 
-        .navbar {
-            background-color: grey;
-            border-bottom: 1px solid grey;
-        }
+.navbar {
+    background-color: #34495e; /* Gris más claro */
+    border-bottom: 1px solid #34495e; /* Gris más claro */
+}
 
-        .navbar-brand, .nav-link {
-            color: white !important;
-            font-size: 18px;
-        }
+.navbar-brand, .nav-link {
+    color: #ecf0f1 !important; /* Blanco */
+    font-size: 18px;
+}
 
-        .navbar-toggler-icon {
-            background-color: white !important;
-        }
+.navbar-toggler-icon {
+    background-color: #ecf0f1 !important; /* Blanco */
+}
 
-        main {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+main {
+    background-color: #34495e; /* Gris más claro */
+    padding: 20px;
+    border-radius: 10px;
+    color: #ecf0f1; /* Blanco */
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-        h2 {
-            color: white;
-        }
+h2 {
+    color: #ecf0f1; /* Blanco */
+}
 
-        p {
-            color: #ccc;
-        }
+p {
+    color: #bdc3c7; /* Gris más claro */
+}
 
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 20px;
-        }
+footer {
+    background-color: #34495e; /* Gris más claro */
+    color: #ecf0f1; /* Blanco */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
 
-        footer a {
-            color: white;
-        }
+footer a {
+    color: #ecf0f1; /* Blanco */
+}
 
-        footer a:hover {
-            text-decoration: none;
-        } 
+footer a:hover {
+    text-decoration: none;
+}
 
-        /* Estilo para los botones con texto blanco */
-        .btn-texto-blanco {
-            color: #ffffff; /* Blanco */
-        }
+/* Estilos de Botones */
+.btn {
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
 
-        /* Estilo para los botones con texto blanco al hacer hover */
-        .btn-texto-blanco:hover {
-            color: #ffffff; /* Blanco */
-        }
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-light,
+.btn-dark {
+    background-color: #16a085; /* Verde */
+    border-color: #16a085; /* Verde */
+}
 
-        /* Mejoras en botones */
-        .btn {
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            margin-bottom: 10px;
-        }
+.btn-texto-blanco {
+    color: #ffffff; /* Blanco */
+}
 
-        .btn-primary {
-            background-color: teal;
-            border-color: teal;
-        }
+.btn-texto-blanco:hover {
+    color: #ffffff; /* Blanco */
+}
 
-        .btn-primary:hover {
-            background-color: teal;
-            border-color: teal;
-        }
 
-        .btn-secondary {
-            background-color: teal;
-            border-color: teal;
-        }
+.btn:hover {
+    background-color: #1abc9c; /* Verde más claro */
+    border-color: #1abc9c; /* Verde más claro */
+}
 
-        .btn-secondary:hover {
-            background-color: teal;
-            border-color: teal;
-        }
+/* Estilos para Acordeón */
+.acordeon {
+    background-color: #16a085; /* Verde */
+    border-color: #ecf0f1; /* Blanco */
+}
 
-        .btn-success {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-success:hover {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-danger {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-danger:hover {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-warning {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-warning:hover {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-info {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-info:hover {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-light {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-light:hover {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-dark {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        .btn-dark:hover {
-            background-color: teal;
-            border-color: teal;
-        }
-
-        /* Hacer la página más responsiva */
-        @media (max-width: 768px) {
-            .navbar-brand, .nav-link {
-                font-size: 16px;
-            }
-        }
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar-brand, .nav-link {
+        font-size: 16px;
+    }
+}
+     
     </style>
 </head>
 <body>
     <header>
        
         <!-- Barra de Navegación -->
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar"
-                        aria-expanded="true" aria-controls="collapseNavbar">
-                        Navega por nuestra página
-                    </button>
-                </h2>
-                <div id="collapseNavbar" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="acordeón" id="ejemploAcordeon">
+        <div class="ítem-acordeón">
+        <h3 class="encabezado-acordeón">
+        <button class="botón-acordeón" type="button" data-bs-toggle="collapse" data-bs-target="#colapsarNavbar"
+         aria-expanded="true" aria-controls="colapsarNavbar">
+         Navega por nuestra página
+        </button>
+        </h3>
+        
+            
+  <div id="collapseNavbar" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <nav class="navbar navbar-expand-lg">
                             <div class="container">
@@ -232,9 +177,9 @@
                 <button type="button" class="btn btn-secondary me-2" onclick="window.location.href='#'">Explorar noticias y eventos</button>
                 <button type="button" class="btn btn-success me-2" onclick="window.location.href='#'">Contactar a la facultad</button>
                 <button type="button" class="btn btn-danger me-2" onclick="window.location.href='#'">Información sobre carreras y programas</button>
-                <button type="button" class="btn btn-warning me-2" onclick="window.location.href='#'">Explorar redes sociales</button>
-                <button type="button" class="btn btn-info me-2" onclick="window.location.href='#'">Más información sobre la universidad</button>
-                <button type="button" class="btn btn-light me-2" onclick="window.location.href='#'">Volver a la página de inicio</button>
+                <button type="button" class="btn btn-warning btn-texto-blanco me-2" onclick="window.location.href='#'">Explorar redes sociales</button>
+                <button type="button" class="btn btn-info btn-texto-blanco me-2" onclick="window.location.href='#'">Más información sobre la universidad</button>
+                <button type="button" class="btn btn-light btn-texto-blanco me-2" onclick="window.location.href='#'">Volver a la página de inicio</button>
                 <button type="button" class="btn btn-dark me-2" onclick="window.location.href='#'">Más eventos académicos</button>
             </div>
         </section>
