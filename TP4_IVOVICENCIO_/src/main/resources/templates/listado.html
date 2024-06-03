@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Alumnos</title>
+</head>
+<body>
+    <h1>Listado de Alumnos</h1>
+    <table border="1">
+        <tr>
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Domicilio</th>
+            <th>LU</th>
+        </tr>
+        <!-- Iterar sobre la lista de alumnos para mostrar cada uno -->
+        <!-- Supongamos que tienes una variable 'alumnos' que contiene la lista de objetos Alumno -->
+        <!-- Puedes usar Thymeleaf para iterar sobre esta lista -->
+        <tr th:each="alumno : ${alumnos}">
+            <td th:text="${alumno.dni}"></td>
+            <td th:text="${alumno.nombre}"></td>
+            <td th:text="${alumno.apellido}"></td>
+            <td th:text="${alumno.email}"></td>
+            <td th:text="${alumno.telefono}"></td>
+            <td th:text="${alumno.fechaNacimiento}"></td>
+            <td th:text="${alumno.domicilio}"></td>
+            <td th:text="${alumno.LU}"></td>
+        </tr>
+    </table>
+</body>
+</html>

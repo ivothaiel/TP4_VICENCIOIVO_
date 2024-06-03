@@ -3,7 +3,9 @@ package ar.edu.unju.fi.collections;
 import ar.edu.unju.fi.model.Carrera;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CarreraCollection {
     private static List<Carrera> carreras = new ArrayList<>();
 

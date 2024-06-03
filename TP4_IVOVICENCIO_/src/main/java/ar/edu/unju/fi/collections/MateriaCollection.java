@@ -3,7 +3,9 @@ package ar.edu.unju.fi.collections;
 import ar.edu.unju.fi.model.Materia;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MateriaCollection {
     private static List<Materia> materias = new ArrayList<>();
 
